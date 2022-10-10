@@ -1,8 +1,11 @@
+import {useState} from 'react';
 import Search from "./components/Search";
 
 function App() {
+  const [countrySearch, setCountrySearch] = useState('');
+  
   return (
-    <Search/>
+    <Search country={countrySearch} setCountry={setCountrySearch}/>
   );
 }
 
