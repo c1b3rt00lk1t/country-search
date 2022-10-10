@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Search = () => {
+const Search = ({country, setCountry}) => {
+
+  const handleChange = (ev)=> setCountry(ev.target.value);
+
   return (
-    <div>Search</div>
+    <>
+        <span>Find countries:</span><input onChange={handleChange} value={country}></input>
+    </>
   )
 }
 
