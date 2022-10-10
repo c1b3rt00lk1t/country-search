@@ -1,7 +1,8 @@
+import Search from "./components/Search";
 
 function App() {
   return (
-    <div>Hello World</div>
+    <Search/>
   );
 }
 
