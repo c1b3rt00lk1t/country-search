@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {useState, useEffect} from 'react';
+import DisplayResults from './components/DisplayResults';
 import Search from "./components/Search";
 
 function App() {
@@ -15,7 +16,10 @@ function App() {
   useEffect(getDataFromServer,[]);
 
   return (
-    <Search country={countrySearch} setCountry={setCountrySearch}/>
+    <>
+      <Search country={countrySearch} setCountry={setCountrySearch}/>
+      <DisplayResults countries={countryDB} />
+    </>
   );
 }
 
