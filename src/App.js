@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <Search country={countrySearch} setCountry={setCountrySearch}/>
-      <DisplayResults countries={countryDB.filter(country => country.name.official.includes(countrySearch))} />
+      <DisplayResults countries={countryDB.filter(country => country.name.official.toLowerCase().includes(countrySearch.toLowerCase()))} />
     </>
   );
 }
