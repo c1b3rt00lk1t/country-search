@@ -15,10 +15,11 @@ function App() {
 
   useEffect(getDataFromServer,[]);
 
+
   return (
     <>
       <Search country={countrySearch} setCountry={setCountrySearch}/>
-      <DisplayResults countries={countryDB} />
+      <DisplayResults countries={countryDB.filter(country => country.name.official.includes(countrySearch))} />
     </>
   );
 }
