@@ -2,7 +2,7 @@ import React from 'react'
 
 const ShowTag = () => {
   return (
-    <div>show</div>
+    <span>show</span>
   )
 }
 
