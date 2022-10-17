@@ -16,10 +16,12 @@ function App() {
   useEffect(getDataFromServer,[]);
 
 
+  const handleClickShowTag = (name) => setCountrySearch(name);
+
   return (
     <>
       <Search country={countrySearch} setCountry={setCountrySearch}/>
-      <DisplayResults countries={countryDB.filter(country => country.name.official.toLowerCase().includes(countrySearch.toLowerCase()))} />
+      <DisplayResults handleClickShowTag={handleClickShowTag} countries={countryDB.filter(country => country.name.official.toLowerCase().includes(countrySearch.toLowerCase()))} />
     </>
   );
 }
