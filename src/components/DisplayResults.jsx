@@ -1,8 +1,10 @@
 import React from 'react'
 
-const DisplayResults = () => {
+const DisplayResults = ({countries}) => {
   return (
-    <div>DisplayResults</div>
+    <>
+      {countries.map( country => <p>{country.name.official}</p>)}
+    </>
   )
 }
 
